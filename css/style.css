@@ -13,5 +13,24 @@
 }
 
 .android-games-size {
-  font-size: 1.2em;
+  font-size: 2em;
+}
+
+.pull-down {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.role-text {
+  font-size: small;
 }
