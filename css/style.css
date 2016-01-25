@@ -31,6 +31,14 @@
   padding-bottom: 0 !important;
 }
 
+.no-padding-bottom {
+  margin-bottom: 0 !important;
+}
+
 .role-text {
   font-size: small;
+}
+
+.card-links {
+  color: #2196F3 !important;
 }

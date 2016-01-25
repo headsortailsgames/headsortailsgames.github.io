@@ -6,27 +6,12 @@
   max-width: 800px;
 }
 
-.fab-back {
-  position: fixed;
-  top: 20 px;
-  left: 20 px;
-}
-
-.margin-default {
-  margin: 8px;
-}
-
-.screenshot-img {
-  height: 30% !important;
-  width: 30%;
-}
-
 .gap-from-banner {
   padding-top: 15%;
 }
 
 .card-header-text {
-  padding: 8px;
+  padding: 10px;
 }
 
 .md-headline {
@@ -34,13 +19,12 @@
 }
 
 .game-background {
-  background-image: url(../img/crayon_click_background.png);
-  background-size: cover;
+  background-image: url(../img/background.png);
   background-position: center;
   height: 100%;
   width: 100%;
   top: 0;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed;
 }
 
