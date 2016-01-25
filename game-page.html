@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#2196F3">
+  <title>Heads or Tails Games</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+
+  <!-- Angular Material CSS now available via Google CDN -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+  <!-- Our CSS -->
+  <link href="css/game-page.css" type="text/css" rel="stylesheet">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+
+<body ng-app="gameDisplayApp">
+
+<div id="main-controller-div" ng-controller="GameDisplayController as gameCtrl">
+  <div id="main-content" class="game-background" layout="column" layout-align="center center">
+
+    <md-button class="md-fab md-fab-top-left" aria-label="Go to home">
+      <md-icon></md-icon>
+    </md-button>
+
+    <div layout-align="center center" class="content-container gap-from-banner">
+      <md-card>
+        <md-card-title>
+          <md-card-title-media>
+            <div class="md-media-lg card-media">
+              <md-whiteframe class="md-whiteframe-1dp profile-image" layout layout-align="center center">
+                  <img ng-src="{{ gameCtrl.icon_path }}" class="md-card-image" alt="{{ gameCtrl.game_name }} icon">
+              </md-whiteframe>
+            </div>
+          </md-card-title-media>
+          <md-card-title-text class="card-header-text">
+            <span class="md-headline">{{ gameCtrl.game_name }}</span>
+            <!-- <span class="md-subhead">{{ gameCtrl.rating }}</span> -->
+
+
+          </md-card-title-text>
+
+        </md-card-title>
+       <md-card-content><p>{{ gameCtrl.description }}</p></md-card-content>
+      </md-card>
+
+      <!-- Screenshot Carousel (Bootstrap) -->
+      <div id="screenshot-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#screenshot-carousel"
+              ng-repeat="screenshot in gameCtrl.screenshots"
+              data-slide-to="{{$index}}"
+              ng-class="{active: $index==0}"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div ng-repeat="screenshot in gameCtrl.screenshots"
+               class="item"
+               ng-class="{active: $index==0}">
+            <img src="{{screenshot}}">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#screenshot-carousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#screenshot-carousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Team</span>
+          </md-card-title-text>
+        </md-card-title>
+       <md-card-content>
+
+        <md-list layout="row" layout-align="space-around">
+          <md-list-item class="md-2-line contact-item" ng-repeat="member in gameCtrl.team">
+            <img ng-src="{{member.image}}" class="md-avatar" alt="{{member.name}}" />
+            <div class="md-list-item-text compact">
+              <h3>{{member.name}}</h3>
+              <p>{{member.email}}</p>
+            </div>
+          </md-list-item>
+        </md-list>
+
+       </md-card-content>
+      </md-card>
+
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Details</span>
+          </md-card-title-text>
+        </md-card-title>
+       <md-card-content> </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
+
+
+<!--  Scripts-->
+
+<!-- JQuery minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- Bootstrap minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+<script src="js/game-page-app.js"></script>
+
+</body>
+
+</html>
