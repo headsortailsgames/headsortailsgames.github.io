@@ -31,3 +31,43 @@
 .profile-image {
   margin-top: -50%;
 }
+
+#home-button.md-fab {
+  background-color: white !important;
+}
+
+#home-button.md-fab:hover, #home-button.md-fab.md-focused {
+  background-color: #2196F3 !important;
+}
+
+.carousel-size {
+  width: 97%;
+}
+
+.animation-delay-1 {
+    -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+    animation-delay: 1s;
+}
+.animation-delay-2 {
+    -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+    animation-delay: 2s;
+}
+
+.avatar-img {
+  max-width:  60px;
+  max-height: 60px;
+  padding: 5px;
+}
+
+.contact-name {
+  font-size: 1em;
+}
+
+.contact-role {
+  color: #F44336;
+  font-style: italic;
+}
+
+.detail-text {
+  padding-left: 10px;
+}

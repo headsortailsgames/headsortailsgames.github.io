@@ -8,6 +8,9 @@
   <meta name="theme-color" content="#2196F3">
   <title>Heads or Tails Games</title>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
 
@@ -25,7 +28,7 @@
 </head>
 
 
-<body ng-app="gameDisplayApp">
+<body ng-app="gameDisplayApp" ng-cloak>
 
 <div id="main-controller-div" ng-controller="GameDisplayController as gameCtrl">
 
@@ -33,7 +36,7 @@
 <div layout="row" layout-align="center center" class="game-background" >
 
   <!-- Home Button -->
-  <md-button id="home-button" class="md-fab md-fab-top-left animated fadeIn" aria-label="Go to home">
+  <md-button id="home-button" class="md-fab md-fab-top-right animated fadeIn" aria-label="Go to home">
     <img src="favicon.png">
   </md-button>
 
@@ -62,32 +65,35 @@
 
 
       <!-- Screenshot Carousel (Bootstrap) -->
-      <div id="screenshot-carousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#screenshot-carousel"
-              ng-repeat="screenshot in gameCtrl.screenshots"
-              data-slide-to="{{$index}}"
-              ng-class="{active: $index==0}"></li>
-        </ol>
+      <div layout="row" layout-align="center center" class="animated bounceInUp animation-delay-1">
+        <div id="screenshot-carousel" class="carousel slide carousel-size" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#screenshot-carousel"
+                ng-repeat="screenshot in gameCtrl.screenshots"
+                data-slide-to="{{$index}}"
+                ng-class="{active: $index==0}"></li>
+          </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div ng-repeat="screenshot in gameCtrl.screenshots"
-               class="item"
-               ng-class="{active: $index==0}">
-            <img src="{{screenshot}}">
-          </div>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div ng-repeat="screenshot in gameCtrl.screenshots"
+                 class="item"
+                 ng-class="{active: $index==0}">
+              <img src="{{screenshot}}">
+            </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#screenshot-carousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#screenshot-carousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#screenshot-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#screenshot-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+         </div>
+         </div>
        </div>
 
 
@@ -100,15 +106,25 @@
         </md-card-title>
        <md-card-content>
 
-        <md-list layout="row" layout-align="space-around">
-          <md-list-item class="md-2-line contact-item" ng-repeat="member in gameCtrl.team | limitTo:3">
-            <img ng-src="{{member.image}}" class="md-avatar" alt="{{member.name}}" />
-            <div class="md-list-item-text compact">
-              <h3>{{member.name}}</h3>
-              <p>{{member.email}}</p>
-            </div>
-          </md-list-item>
-        </md-list>
+          <md-grid-list
+              md-cols-xs="3" md-cols-sm="3" md-cols-gt-sm="9"
+              md-row-height-gt-md="1:1" md-row-height="1:1"
+              md-gutter="12px" md-gutter-gt-sm="8px" >
+            <md-grid-tile
+                ng-repeat="member in gameCtrl.team"
+                md-colspan="3"
+                md-rowspan-gt-sm="1">
+              <div layout="row" flex>
+                <div layout="column" layout-align="center center">
+                  <a href="mailto:{{member.email}}"><img ng-src="{{member.image}}" class="avatar-img" alt="{{member.name}}" /></a>
+                </div>
+                <div layout="column" flex-offset="5" flex>
+                    <h4 class="contact-name">{{member.name}}</h4>
+                    <p class="contact-role">{{member.role}}</p>
+                </div>
+              </div>
+            </md-grid-tile>
+          </md-grid-list>
 
        </md-card-content>
       </md-card>
@@ -120,7 +136,20 @@
             <span class="md-headline">Details</span>
           </md-card-title-text>
         </md-card-title>
-       <md-card-content> </md-card-content>
+        <md-card-content>
+          <md-list>
+            <md-list-item class="md-1-line" ng-repeat="detail in gameCtrl.details">
+              <div layout="row" flex>
+                <div layout="colunm" layout-align="center center">
+                  <i class="{{ detail.icon_class }}">{{ detail.icon }}</i>
+                </div>
+                <div layout="colunm" class="detail-text">
+                  <h5>{{ detail.text }}</h5>
+                </div>
+              </div>
+            </md-list-item>
+          </md-list>
+        </md-card-content>
       </md-card>
 
 

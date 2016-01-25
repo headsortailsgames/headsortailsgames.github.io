@@ -11,12 +11,17 @@
         this.isOpen = false;
         this.categories = ['Puzzle']
         this.team = [
-            {name: "John Doe", email: "john@mail.com"},
-            {name: "Jane Doe", email: "jane@mail.com"},
-            {name: "John Lock", email: "lock@mail.com"},
-            {name: "John Lock", email: "lock@mail.com"},
-            {name: "John Lock", email: "lock@mail.com"},
-            {name: "John Lock", email: "lock@mail.com"},
+            {name: "Bruna Moreira",    role: "Designer", email: "brunanayaramlima@gmail.com", image: "img/avatar2.png"},
+            {name: "Luciano Prestes",  role: "Developer", email: "lucianopcbr@gmail.com", image: "img/avatar3.png"},
+            {name: "Matheus Faria", role: "Game Designer", email: "matheus.sousa.faria@gmail.com", image: "img/avatar1.png"},
+            {name: "Rafael Reis",  role: "Musician", email: "rafareis_@live.com", image: "img/avatar3.png"},
+            {name: "Lucas Moura", role: "Developer", email: "lucasmoura128@gmail.com", image: "img/avatar1.png"},
+        ]
+
+        this.details = [
+            {icon: "date_range", icon_class: "material-icons", text: "Available in 29 February"},
+            {icon: "extension", icon_class: "material-icons", text: "Version 1.0.0"},
+            {icon: "mail_outline", icon_class: "material-icons", text: "headsortails.games@gmail.com"},
         ]
     });
 
