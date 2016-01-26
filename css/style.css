@@ -44,6 +44,6 @@
 }
 
 a.no-link:hover, a.no-link:active, a.no-link:focus,
-a.no-link:hover, a.no-link:visited {
+a.no-link:hover, a.no-link:visited, a.no-link {
   text-decoration: none; color:black
 }
