@@ -1,13 +1,5 @@
-.card-media {
-  background-color: #999999;
-}
-
 .content-container {
   max-width: 800px;
-}
-
-.gap-from-banner {
-  padding-top: 15%;
 }
 
 .card-header-text {
@@ -70,4 +62,31 @@
 
 .detail-text {
   padding-left: 10px;
+}
+
+/* Screen Size dependeciees */
+
+/* Less or equal to 500px */
+@media (max-width:500px) {
+  .game-icon {
+    height: 80px;
+    width:  80px;
+  }
+
+  .gap-from-banner {
+    padding-top: 30%;
+  }
+}
+
+/* Greater than 500px */
+@media (min-width:501px) {
+
+  .game-icon {
+    height: 152px;
+    width:  152px;
+  }
+
+  .gap-from-banner {
+    padding-top: 15%;
+  }
 }
