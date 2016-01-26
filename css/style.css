@@ -42,3 +42,8 @@
 .card-links {
   color: #2196F3 !important;
 }
+
+a.no-link:hover, a.no-link:active, a.no-link:focus,
+a.no-link:hover, a.no-link:visited {
+  text-decoration: none; color:black
+}

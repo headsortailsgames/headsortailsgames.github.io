@@ -4,7 +4,7 @@
     APP.controller("GameDisplayController", function() {
         this.game_name = 'Crayon Click'
         this.icon_path = 'img/crayon_click_icon.png'
-        this.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet neque sed lorem condimentum, nec sodales mauris tincidunt. Nunc metus augue, ornare sit amet fermentum quis, efficitur a turpis. Ut id nunc hendrerit erat aliquet faucibus. Integer eleifend orci sed ante vulputate, vitae posuere est faucibus. Nunc lacinia scelerisque mauris. Sed id congue eros. Proin fermentum augue ac risus convallis porta. Etiam efficitur at purus sit amet laoreet.'
+        this.description = 'Crayon Click is a puzzle game with more than 100 levels.\nTest your brain and relax with the simple and yet challenging gameplay.\nEnjoy different worlds with different designs for the puzzles'
         this.rating = 3.5
         this.screenshots = ['img/banner-screen.png',
                             'img/banner-description.png']
