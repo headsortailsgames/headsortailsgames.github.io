@@ -4,7 +4,7 @@
     APP.controller("GameDisplayController", function() {
         this.game_name = 'Crayon Click'
         this.icon_path = 'img/crayon_click_icon.png'
-        this.description = 'Dear tester,\nMe, one of the most brilliant minds, created this extremely hard puzzle to test your brain and skills. You have just one goal: fill all the square. And just one rule as well: touch in a square to change the adjacents color. If you beat all the 100+ levels, you will prove that are as brilliant as myself. Although this puzzle is brilliant, I didn’t had time to finish it, that is why I handle out the blueprints for my crew so they can finish the game. I hope that they don’t mess up.\n\nGood luck trying to solve all the puzzles,\nThe Engineer.'
+        this.description = 'Dear tester,\n\nMe, one of the most brilliant minds, created this extremely hard puzzle to test your brain and skills. You have just one goal: fill all the square. And just one rule as well: touch in a square to change the adjacents color. If you beat all the 100+ levels, you will prove that are as brilliant as myself. Although this puzzle is brilliant, I didn’t had time to finish it, that is why I handle out the blueprints for my crew so they can finish the game. I hope that they don’t mess up.\n\nGood luck trying to solve all the puzzles,\nThe Engineer.'
         this.rating = 3.5
         this.screenshots = ['img/banner-screen.png',
                             'img/banner-instructions.png',
