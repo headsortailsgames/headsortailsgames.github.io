@@ -62,7 +62,7 @@
             <!-- <span class="md-subhead">{{ gameCtrl.rating }}</span> -->
           </md-card-title-text>
         </md-card-title>
-       <md-card-content><p>{{ gameCtrl.description }}</p></md-card-content>
+       <md-card-content><p div ng-bind-html="gameCtrl.description | multilineText"></p></md-card-content>
       </md-card>
 
 
