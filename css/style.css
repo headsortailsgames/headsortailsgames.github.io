@@ -47,3 +47,17 @@ a.no-link:hover, a.no-link:active, a.no-link:focus,
 a.no-link:hover, a.no-link:visited, a.no-link {
   text-decoration: none; color:black
 }
+
+.comming-soon-badge {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #2196F3;
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 6px;
+  padding-left: 6px;
+  color: white;
+  font-size: 1.2em;
+}
