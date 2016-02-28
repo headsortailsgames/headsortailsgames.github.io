@@ -28,10 +28,6 @@
   background-color: white !important;
 }
 
-#home-button.md-fab:hover, #home-button.md-fab.md-focused {
-  background-color: #2196F3 !important;
-}
-
 .carousel-size {
   width: 97%;
 }
@@ -89,4 +85,33 @@
   .gap-from-banner {
     padding-top: 15%;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-image {
+  max-width: 400px;
+  height: auto;
+  margin: 12%;
+}
+
+.md-button.download-button {
+  margin: 5%;
+}
+
+img.download-button {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1%;
 }

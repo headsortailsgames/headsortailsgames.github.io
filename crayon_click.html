@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="gameDisplayApp">
 
 
-<head>
+<head ng-controller="GameDisplayController as gameCtrl">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <meta name="theme-color" content="#2196F3">
-  <title>Heads or Tails Games</title>
+  <title>{{ gameCtrl.title }}</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
-
-  <!-- Animate CSS -->
-  <link href="min/animate.min.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+  <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
 
   <!-- Angular Material CSS now available via Google CDN -->
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
@@ -28,135 +25,89 @@
 </head>
 
 
-<body ng-app="gameDisplayApp" ng-cloak>
+<!-- Template body -->
+<body ng-controller="GameDisplayController as gameCtrl" ng-cloak>
 
-<div id="main-controller-div" ng-controller="GameDisplayController as gameCtrl">
+<div id="main-controller-div">
 
 <!-- Creating main layout -->
-<div layout="row" layout-align="center center" class="game-background" >
+<div layout="row" layout-align="center center" class="game-background">
 
   <!-- Home Button -->
   <a href="index.html">
-    <md-button id="home-button" class="md-fab md-fab-top-right animated fadeIn" aria-label="Go to home">
+    <md-button id="home-button" class="md-fab md-fab-top-right" aria-label="Go to home">
       <img src="favicon.png">
     </md-button>
   </a>
 
   <!-- Main content -->
-  <div id="main-content" layout="column">
-    <div layout-align="center center" class="content-container gap-from-banner">
+  <div id="main-content" layout="column" class="content-container">
 
-
-      <!-- Description Card -->
-      <md-card class="animated bounceInUp">
-        <md-card-title>
-          <md-card-title-media>
-            <div class="game-icon">
-              <md-whiteframe class="md-whiteframe-3dp profile-image" layout layout-align="center center">
-                  <img ng-src="{{ gameCtrl.icon_path }}" class="md-card-image" alt="{{ gameCtrl.game_name }} icon">
-              </md-whiteframe>
-            </div>
-          </md-card-title-media>
-          <md-card-title-text class="card-header-text">
-            <span class="md-headline">{{ gameCtrl.game_name }}</span>
-            <!-- <span class="md-subhead">{{ gameCtrl.rating }}</span> -->
-          </md-card-title-text>
-        </md-card-title>
-       <md-card-content><p div ng-bind-html="gameCtrl.description | multilineText"></p></md-card-content>
-      </md-card>
-
-
-      <!-- Screenshot Carousel (Bootstrap) -->
-      <div layout="row" layout-align="center center" class="animated bounceInUp animation-delay-1">
-        <div id="screenshot-carousel" class="carousel slide carousel-size" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#screenshot-carousel"
-                ng-repeat="screenshot in gameCtrl.screenshots"
-                data-slide-to="{{$index}}"
-                ng-class="{active: $index==0}"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div ng-repeat="screenshot in gameCtrl.screenshots"
-                 class="item"
-                 ng-class="{active: $index==0}">
-              <img src="{{screenshot}}">
-            </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#screenshot-carousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#screenshot-carousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-         </div>
-         </div>
-       </div>
-
-
-      <!-- Team Card -->
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Team</span>
-          </md-card-title-text>
-        </md-card-title>
-       <md-card-content>
-
-          <md-grid-list
-              md-cols-xs="3" md-cols-sm="3" md-cols-gt-sm="9"
-              md-row-height-gt-md="1:1" md-row-height="1:1"
-              md-gutter="12px" md-gutter-gt-sm="8px" >
-            <md-grid-tile
-                ng-repeat="member in gameCtrl.team"
-                md-colspan="3"
-                md-rowspan-gt-sm="1">
-              <div layout="row" flex>
-                <div layout="column" layout-align="center center">
-                  <a href="mailto:{{member.email}}"><img ng-src="{{member.image}}" class="avatar-img" alt="{{member.name}}" /></a>
-                </div>
-                <div layout="column" flex-offset="5" flex>
-                    <h4 class="contact-name">{{member.name}}</h4>
-                    <p class="contact-role">{{member.role}}</p>
-                </div>
-              </div>
-            </md-grid-tile>
-          </md-grid-list>
-
-       </md-card-content>
-      </md-card>
-
-      <!-- Details Card -->
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Details</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-          <md-list>
-            <md-list-item class="md-1-line" ng-repeat="detail in gameCtrl.details">
-              <div layout="row" flex>
-                <div layout="colunm" layout-align="center center">
-                  <i class="{{ detail.icon_class }}">{{ detail.icon }}</i>
-                </div>
-                <div layout="colunm" class="detail-text">
-                  <h5>{{ detail.text }}</h5>
-                </div>
-              </div>
-            </md-list-item>
-          </md-list>
-        </md-card-content>
-      </md-card>
-
-
+    <!-- Header Image -->
+    <div layout="row" layout-align="center center">
+      <img src="{{gameCtrl.header_image}}" class="header-image">
     </div>
+
+    <!-- Central Video/Image -->
+    <div layout="row" layout-align="center center">
+      <iframe id="ytplayer" type="text/html" width="800" height="400"
+        src="https://www.youtube.com/embed/WSVKbw7LC2w?controls=2&showinfo=0"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download Button -->
+    <div layout="row" layout-align="center center">
+      <md-button aria-label="Download" class="download-button">
+        <img src="{{ gameCtrl.download_button }}" class="download-button">
+      </md-button>
+    </div>
+
+    <!-- Images -->
+    <div layout="row" layout-align="center center">
+      <div id="links">
+        <a ng-repeat="image in gameCtrl.images" href="{{ image.src }}" title="{{ image.title }}" data-gallery>
+            <img src="{{ image.thumbnail }}" alt="{{ image.title }}">
+        </a>
+      </div>
+
+      <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+      <div id="blueimp-gallery" class="blueimp-gallery">
+          <!-- The container for the modal slides -->
+          <div class="slides"></div>
+          <!-- Controls for the borderless lightbox -->
+          <h3 class="title"></h3>
+          <a class="prev">‹</a>
+          <a class="next">›</a>
+          <a class="close">×</a>
+          <a class="play-pause"></a>
+          <ol class="indicator"></ol>
+          <!-- The modal dialog, which will be used to wrap the lightbox content -->
+          <div class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"></h4>
+                      </div>
+                      <div class="modal-body next"></div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default pull-left prev">
+                              <i class="glyphicon glyphicon-chevron-left"></i>
+                              Previous
+                          </button>
+                          <button type="button" class="btn btn-primary next">
+                              Next
+                              <i class="glyphicon glyphicon-chevron-right"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
   </div>
+
 </div>
 </div>
 
@@ -168,6 +119,9 @@
 <!-- Bootstrap minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
+<script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/bootstrap-image-gallery.min.js"></script>
+
 <!-- Angular Material requires Angular.js Libraries -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
@@ -178,6 +132,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 
 <script src="js/game-page-app.js"></script>
+<script src="js/landing_page.js"></script>
 
 </body>
 
