@@ -4,6 +4,7 @@
 
 <head ng-controller="GameDisplayController as gameCtrl">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>{{ gameCtrl.title }}</title>
 
   <!-- Icons -->
@@ -49,8 +50,8 @@
     </div>
 
     <!-- Central Video/Image -->
-    <div layout="row" layout-align="center center">
-      <iframe id="ytplayer" type="text/html" width="800" height="400"
+    <div layout="row" layout-align="center center" class="embed-responsive embed-responsive-16by9">
+      <iframe id="ytplayer" type="text/html" class="embed-responsive-item"
         ng-src="{{ gameCtrl.central_banner | bannerURL }}"
         frameborder="0" allowfullscreen></iframe>
     </div>
@@ -64,24 +65,20 @@
 
     <!-- Images -->
     <div layout="row" layout-align="center center">
-      <div id="links"  layout="row" class="thumbnail-slider">
+      <div id="links"  layout="row" layout-align="space-around" layout-wrap>
         <a ng-repeat="image in gameCtrl.images" href="{{ image.src }}" title="{{ image.title }}" class="thumbnail-link" data-gallery>
             <img src="{{ image.thumbnail }}" alt="{{ image.title }}" class="thumbnail-image">
         </a>
       </div>
 
-      <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
       <div id="blueimp-gallery" class="blueimp-gallery">
-          <!-- The container for the modal slides -->
           <div class="slides"></div>
-          <!-- Controls for the borderless lightbox -->
           <h3 class="title"></h3>
           <a class="prev">‹</a>
           <a class="next">›</a>
           <a class="close">×</a>
           <a class="play-pause"></a>
           <ol class="indicator"></ol>
-          <!-- The modal dialog, which will be used to wrap the lightbox content -->
           <div class="modal fade">
               <div class="modal-dialog">
                   <div class="modal-content">
