@@ -6,8 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>{{ gameCtrl.title }}</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
@@ -26,7 +26,7 @@
 
 
 <!-- Template body -->
-<body ng-controller="GameDisplayController as gameCtrl" ng-cloak>
+<body ng-controller="GameDisplayController as gameCtrl">
 
 <div id="main-controller-div">
 
@@ -51,7 +51,7 @@
     <!-- Central Video/Image -->
     <div layout="row" layout-align="center center">
       <iframe id="ytplayer" type="text/html" width="800" height="400"
-        src="https://www.youtube.com/embed/WSVKbw7LC2w?controls=2&showinfo=0"
+        ng-src="{{ gameCtrl.central_banner | bannerURL }}"
         frameborder="0" allowfullscreen></iframe>
     </div>
 
@@ -64,9 +64,9 @@
 
     <!-- Images -->
     <div layout="row" layout-align="center center">
-      <div id="links">
-        <a ng-repeat="image in gameCtrl.images" href="{{ image.src }}" title="{{ image.title }}" data-gallery>
-            <img src="{{ image.thumbnail }}" alt="{{ image.title }}">
+      <div id="links"  layout="row" class="thumbnail-slider">
+        <a ng-repeat="image in gameCtrl.images" href="{{ image.src }}" title="{{ image.title }}" class="thumbnail-link" data-gallery>
+            <img src="{{ image.thumbnail }}" alt="{{ image.title }}" class="thumbnail-image">
         </a>
       </div>
 
@@ -106,13 +106,56 @@
       </div>
     </div>
 
+
+    <!-- About -->
+    <div layout="row" layout-align="center center">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">About</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p div ng-bind-html="gameCtrl.description | multilineText"></p>
+        </md-card-content>
+      </md-card>
+    </div>
+
+
   </div>
 
 </div>
 </div>
 
+<!-- Footer -->
+<footer id="footer" layout="column" layout-align="center center">
+  <div layout="row" class="content-container full-expand">
+    <div layout="column" flex="grow">
+      <div layout="row">
+        <a ng-repeat="social in gameCtrl.company.social_networks" href="{{ social.link }}" class="footer-icon">
+          <i class="fa {{ social.icon }} fa-3x"></i>
+        </a>
+      </div>
+      <div layout="row" layout-align="start center">
+          <i class="fa fa-at fa-3x"></i>
+          <a href="mailto:{{ gameCtrl.company.email }}">{{ gameCtrl.company.email }}</a>
+      </div>
+    </div>
+    <div layout="column" flex="grow" class="vertical-line">
+      <ul class="footer-list">
+        <li ng-repeat="link in gameCtrl.footer_links">
+          <a href="{{ link.link }}">{{ link.text }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div layout="row" layout-align="center center" class="full-expand footer-copyright">
+    © Heads or Tails Games 2016 Copyright
+  </div>
+</footer>
 
-<!--  Scripts-->
+
+<!-- Scripts -->
 
 <!-- JQuery minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
