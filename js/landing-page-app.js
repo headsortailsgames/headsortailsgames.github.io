@@ -1,7 +1,7 @@
 (function() {
-    var APP = angular.module('gameDisplayApp', ['ngMaterial']);
+    var APP = angular.module('landingPageApp', ['ngMaterial']);
 
-    APP.controller("GameDisplayController", function($scope) {
+    APP.controller("LandingPageController", function($scope) {
         this.title = 'Crayon Click'
 
         this.header_image = "img/crayon_click_title.png"

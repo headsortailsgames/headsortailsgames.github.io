@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="gameDisplayApp">
+<html ng-app="landingPageApp">
 
 
-<head ng-controller="GameDisplayController as gameCtrl">
+<head ng-controller="LandingPageController as landingCtrl">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <title>{{ gameCtrl.title }}</title>
+  <title>{{ landingCtrl.title }}</title>
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 
   <!-- Our CSS -->
-  <link href="css/game-page.css" type="text/css" rel="stylesheet">
+  <link href="css/landing-page.css" type="text/css" rel="stylesheet">
 
   <!-- favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -27,12 +27,12 @@
 
 
 <!-- Template body -->
-<body ng-controller="GameDisplayController as gameCtrl">
+<body ng-controller="LandingPageController as landingCtrl">
 
 <div id="main-controller-div">
 
 <!-- Creating main layout -->
-<div layout="row" layout-align="center center" class="game-background">
+<div layout="row" layout-align="center center" class="page-background">
 
   <!-- Home Button -->
   <a href="index.html">
@@ -46,27 +46,27 @@
 
     <!-- Header Image -->
     <div layout="row" layout-align="center center">
-      <img src="{{gameCtrl.header_image}}" class="header-image">
+      <img src="{{landingCtrl.header_image}}" class="header-image">
     </div>
 
     <!-- Central Video/Image -->
     <div layout="row" layout-align="center center" class="embed-responsive embed-responsive-16by9">
       <iframe id="ytplayer" type="text/html" class="embed-responsive-item"
-        ng-src="{{ gameCtrl.central_banner | bannerURL }}"
+        ng-src="{{ landingCtrl.central_banner | bannerURL }}"
         frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- Download Button -->
     <div layout="row" layout-align="center center">
       <md-button aria-label="Download" class="download-button">
-        <img src="{{ gameCtrl.download_button }}" class="download-button">
+        <img src="{{ landingCtrl.download_button }}" class="download-button">
       </md-button>
     </div>
 
     <!-- Images -->
     <div layout="row" layout-align="center center">
       <div id="links"  layout="row" layout-align="space-around" layout-wrap>
-        <a ng-repeat="image in gameCtrl.images" href="{{ image.src }}" title="{{ image.title }}" class="thumbnail-link" data-gallery>
+        <a ng-repeat="image in landingCtrl.images" href="{{ image.src }}" title="{{ image.title }}" class="thumbnail-link" data-gallery>
             <img src="{{ image.thumbnail }}" alt="{{ image.title }}" class="thumbnail-image">
         </a>
       </div>
@@ -113,7 +113,7 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <p div ng-bind-html="gameCtrl.description | multilineText"></p>
+          <p div ng-bind-html="landingCtrl.description | multilineText"></p>
         </md-card-content>
       </md-card>
     </div>
@@ -129,18 +129,18 @@
   <div layout="row" class="content-container full-expand" layout-wrap>
     <div layout="column" flex="auto">
       <div layout="row">
-        <a ng-repeat="social in gameCtrl.company.social_networks" href="{{ social.link }}" class="footer-icon">
+        <a ng-repeat="social in landingCtrl.company.social_networks" href="{{ social.link }}" class="footer-icon">
           <i class="fa {{ social.icon }} fa-3x"></i>
         </a>
       </div>
       <div layout="row" layout-align="start center">
           <i class="fa fa-at fa-2x"></i>
-          <a href="mailto:{{ gameCtrl.company.email }}">{{ gameCtrl.company.email }}</a>
+          <a href="mailto:{{ landingCtrl.company.email }}">{{ landingCtrl.company.email }}</a>
       </div>
     </div>
     <div layout="column" flex="50" class="vertical-line">
       <ul class="footer-list">
-        <li ng-repeat="link in gameCtrl.footer_links">
+        <li ng-repeat="link in landingCtrl.footer_links">
           <a href="{{ link.link }}">{{ link.text }}</a>
         </li>
       </ul>
@@ -171,8 +171,9 @@
 <!-- Angular Material Library -->
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 
-<script src="js/game-page-app.js"></script>
-<script src="js/landing_page.js"></script>
+<!-- Our Scripts -->
+<script src="js/landing-page-app.js"></script>
+<script src="js/landing-page.js"></script>
 
 </body>
 
