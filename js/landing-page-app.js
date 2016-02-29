@@ -4,7 +4,7 @@
     APP.controller("LandingPageController", function($scope) {
         this.title = 'Crayon Click'
         this.header_image = "img/crayon_click_title.png"
-        this.central_banner = "https://www.youtube.com/embed/WSVKbw7LC2w"
+        this.central_banner = "https://www.youtube.com/embed/RgS1rUMnGQY"
         this.background_src = "img/background.png"
 
         this.download_button = "img/button_coming_soon.png"
