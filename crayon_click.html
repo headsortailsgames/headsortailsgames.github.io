@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="landingPageApp">
 
-
 <head ng-controller="LandingPageController as landingCtrl">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -28,11 +27,12 @@
 
 <!-- Template body -->
 <body ng-controller="LandingPageController as landingCtrl">
-
 <div id="main-controller-div">
 
-<!-- Creating main layout -->
-<div layout="row" layout-align="center center" class="page-background">
+
+<!-- Main layout -->
+<div layout="row" layout-align="center center" class="page-background" style="background-image: url({{ landingCtrl.background_src }})">
+
 
   <!-- Home Button -->
   <a href="index.html">
@@ -40,6 +40,7 @@
       <img src="favicon.png">
     </md-button>
   </a>
+
 
   <!-- Main content -->
   <div id="main-content" layout="column" class="content-container">
@@ -49,6 +50,7 @@
       <img src="{{landingCtrl.header_image}}" class="header-image">
     </div>
 
+
     <!-- Central Video/Image -->
     <div layout="row" layout-align="center center" class="embed-responsive embed-responsive-16by9">
       <iframe id="ytplayer" type="text/html" class="embed-responsive-item"
@@ -56,12 +58,14 @@
         frameborder="0" allowfullscreen></iframe>
     </div>
 
+
     <!-- Download Button -->
     <div layout="row" layout-align="center center">
       <md-button aria-label="Download" class="download-button">
         <img src="{{ landingCtrl.download_button }}" class="download-button">
       </md-button>
     </div>
+
 
     <!-- Images -->
     <div layout="row" layout-align="center center">
@@ -117,12 +121,10 @@
         </md-card-content>
       </md-card>
     </div>
-
-
   </div>
+</div>
+</div>
 
-</div>
-</div>
 
 <!-- Footer -->
 <footer id="footer" layout="column" layout-align="center center">
