@@ -126,19 +126,19 @@
 
 <!-- Footer -->
 <footer id="footer" layout="column" layout-align="center center">
-  <div layout="row" class="content-container full-expand">
-    <div layout="column" flex="grow">
+  <div layout="row" class="content-container full-expand" layout-wrap>
+    <div layout="column" flex="auto">
       <div layout="row">
         <a ng-repeat="social in gameCtrl.company.social_networks" href="{{ social.link }}" class="footer-icon">
           <i class="fa {{ social.icon }} fa-3x"></i>
         </a>
       </div>
       <div layout="row" layout-align="start center">
-          <i class="fa fa-at fa-3x"></i>
+          <i class="fa fa-at fa-2x"></i>
           <a href="mailto:{{ gameCtrl.company.email }}">{{ gameCtrl.company.email }}</a>
       </div>
     </div>
-    <div layout="column" flex="grow" class="vertical-line">
+    <div layout="column" flex="50" class="vertical-line">
       <ul class="footer-list">
         <li ng-repeat="link in gameCtrl.footer_links">
           <a href="{{ link.link }}">{{ link.text }}</a>
