@@ -1,0 +1,12 @@
+<div ng-controller="HomeController as homectrl">
+
+  <md-toolbar layout="row" layout-align="center center">
+    <div>
+        Heads or Tails Games
+    </div>
+  </md-toolbar>
+
+
+  <div ng-include="'app/home/home-carousel.html'" onload="homectrl.carouselSetup()"></div>
+
+</div>
