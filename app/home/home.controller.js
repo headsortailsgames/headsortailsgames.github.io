@@ -13,28 +13,22 @@
 
         // Public
         vm.banners = [];
-        vm.carouselSetup = carouselSetup;
 
         // Private
         function activate() {
             getBannerList();
+            carouselSetup()
         }
 
 
         var games = AppService.gameList();
 
         function carouselSetup() {
-            console.log("----------------");
-            $('.owl-carousel').owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 10,
-                nav: true,
-                animateOut: 'slideOutDown',
-                animateIn: 'slideInUp',
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
+            $('#carousel-example-generic').carousel({
+                interval: 2000,
+                pause: "hover",
+                wrap: true,
+                keyboard: true,
             })
         }
 
