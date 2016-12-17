@@ -1,5 +1,5 @@
 angular.module('app').
-config(function($routeProvider) {
+config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
 
     // Whatever
@@ -13,4 +13,7 @@ config(function($routeProvider) {
 
     //Otherwise
     .otherwise({redirectTo:'/404'});
-});
+
+    // Remove the # from links. Requires the <head><base href="\"><\head> on index
+    $locationProvider.html5Mode(true);
+}]);

@@ -1,27 +1,84 @@
-<div ng-controller="HomeController as homectrl">
+<div ng-controller="HomeController as homectrl" layout="column">
 
-  <md-toolbar layout="row" layout-align="center center">
-    <div>
-        Heads or Tails Games
+  <!-- Navigation bar -->
+  <header id="header" md-whiteframe="3" layout="row">
+    <div layout="row" layout-align-xs="center center" flex-xs>
+      <img src="assets/img/app/heads-or-tails-header-logo.svg"
+           class="logo-margin"/>
     </div>
-  </md-toolbar>
 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" ng-repeat="slide in "data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    </ol>
+    <div layout="row" layout-align="end" hide show-gt-xs flex>
+      <div class="menu-item" layout="row" layout-align="center center">
+        <a href="#game-list">Games</a>
+      </div>
+      <div class="menu-item" layout="row" layout-align="center center">
+        <a href="#contacts">Contact</a>
+      </div>
+      <div class="menu-item" layout="row" layout-align="center center">
+        <a ng-href="press">Press Kits</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="assets/img/crayonclick/home-banner.png" alt="Home Banner">
-      </div>
-      <div class="item">
-        <img src="assets/img/superracing/home-banner.png" alt="Home Banner">
-      </div>
+  <!-- Main Banner -->
+  <div layout="row" layout-align="center center">
+    <img ng-src="{{ homectrl.main_game.home_banner }}" />
+  </div>
+
+  <!-- Stores -->
+  <div layout="row" layout-align="center center">
+    <div ng-repeat="store in homectrl.stores">
+      <img ng-src="{{ store.image }}" />
     </div>
   </div>
+
+  <!-- Game List -->
+  <section id="game-list">
+  <div layout="row">
+    <md-card ng-repeat="game in homectrl.games">
+      <img ng-src="{{ game.icon }}" class="md-card-image" alt="{{ game.name }} icon">
+      <md-card-actions layout="row" layout-align="end center">
+        <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{ game.name }}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon class="mdi mdi-google-play"></md-icon>
+        </md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacts" layout="column">
+    <div layout="row"  layout-align="space-around center" flex>
+      <div layout="column">
+        <md-icon md-svg-icon="assets/img/app/heads-or-tails-games-logo-icon.svg"></md-icon>
+        <p>{{ homectrl.studio_info.name }}</p>
+      </div>
+      <div layout="column">
+        <md-icon class="mdi mdi-facebook-box"></md-icon>
+        <p>Facebook</p>
+      </div>
+      <div layout="column">
+        <md-icon class="mdi mdi-google-play"></md-icon>
+        <p>Google Play</p>
+      </div>
+      <div layout="column">
+        <md-icon class="mdi mdi-newspaper"></md-icon>
+        <p>Press Kit</p>
+      </div>
+    </div>
+
+    <div layout="row" layout-align="center center">
+      <p>{{ homectrl.studio_info.email }}</p>
+    </div>
+
+    <div layout="row" layout-align="center center">
+      {{ homectrl.studio_info.copyright }}
+    </div>
+  </footer>
+
 </div>
