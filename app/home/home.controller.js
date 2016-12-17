@@ -5,46 +5,21 @@
         .module('app.home')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['AppService'];
+    HomeController.$inject = ['GamesService', 'StudioService'];
 
     /* @ngInject */
-    function HomeController(AppService) {
+    function HomeController(GamesService, StudioService) {
         var vm = this;
 
         // Public
-        vm.banners = [];
+        vm.games = GamesService.gameList;
+        vm.main_game = GamesService.mainGame;
+        vm.stores = StudioService.stores;
+        vm.studio_info = StudioService.info;
 
         // Private
         function activate() {
-            getBannerList();
-            carouselSetup()
         }
-
-
-        var games = AppService.gameList();
-
-        function carouselSetup() {
-            $('#carousel-example-generic').carousel({
-                interval: 2000,
-                pause: "hover",
-                wrap: true,
-                keyboard: true,
-            })
-        }
-
-        function getBannerList() {
-            for(var i = 0; i < games.length; ++i)
-            {
-                if(games[i].home_banner)
-                {
-                    vm.banners.push({
-                        'id': vm.banners.length,
-                        'image': games[i].home_banner,
-                        'link': AppService.gameUrl(games[i]),
-                    });
-                }
-            }
-        };
 
         activate();
     }

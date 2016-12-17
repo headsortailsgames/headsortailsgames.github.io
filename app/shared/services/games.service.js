@@ -3,29 +3,57 @@
 
     angular
         .module('app')
-        .factory('AppService', AppService);
+        .factory('GamesService', GamesService);
 
-    AppService.$inject = [];
+    GamesService.$inject = [];
 
     /* @ngInject */
-    function AppService() {
+    function GamesService() {
+        var service = {
+            findGameById: findGameById,
+            findGameByNameSlug: findGameByNameSlug,
+            gameList: gameList(),
+            gameUrl: gameUrl,
+            mainGame: getMainGame(),
+        };
 
-        this.gameUrl = function(game) {
+        return service;
+
+        ////////////
+
+        function findGameById(id) {
+            var list = gameList();
+            var game_found;
+
+            list.forEach(function(game) {
+                if (game.id === id)
+                    game_found = game;
+            });
+
+            return game_found;
+        };
+
+        function findGameByNameSlug(slug) {
+            var list = gameList();
+            var game_found;
+
+            list.forEach(function(game) {
+                if (game.name_slug === slug)
+                    game_found = game;
+            });
+
+            return game_found;
+        };
+
+        function gameUrl(game) {
             return 'game/' + game.id;
         };
 
-        this.headOrTailsInfo = function() {
-            return {
-                'facebook_page_url': 'https://www.facebook.com/headsortailsgames',
-                'google_play_page_url': 'https://play.google.com/store/apps/dev?id=5680804993477078845',
-                'youtube_page_url': 'https://www.youtube.com/channel/UCoZELmQB-hp3UvH5UHY1dqg',
-                'email': 'headsortails.games@gmail.com',
-                'copyright': '© Heads or Tails Games 2016 Copyright',
-                'site_url': 'headsortailsgame.com'
-            };
+        function getMainGame() {
+            return findGameByNameSlug('crayonclick');
         };
 
-        this.gameList = function() {
+        function gameList() {
             var list = [
                 // // Game Name
                 // {
@@ -76,8 +104,8 @@
                     'trailer_video_url': '',
                     'game_description': '',
                     'game_short_description': '',
-                    'icon': '',
-                    'small_icon': '',
+                    'icon': 'assets/img/crayonclick/icon.png',
+                    'small_icon': 'assets/img/crayonclick/icon.png',
                     'imgs': {
                      },
                     'released': false,
@@ -108,7 +136,5 @@
 
             return list;
         };
-
-        return this;
     }
 })();
