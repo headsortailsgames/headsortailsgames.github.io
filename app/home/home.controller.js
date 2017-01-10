@@ -16,6 +16,7 @@
         vm.main_game = GamesService.mainGame;
         vm.stores = StudioService.stores;
         vm.studio_info = StudioService.info;
+        vm.top_games = GamesService.topGames;
 
         // Private
         function activate() {

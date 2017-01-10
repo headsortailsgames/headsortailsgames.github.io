@@ -21,9 +21,32 @@
   </header>
 
   <!-- Main Banner -->
-  <div layout="row" layout-align="center center">
-    <img ng-src="{{ homectrl.main_game.home_banner }}" />
-  </div>
+  <section id="main-banner">
+    <md-grid-list
+      md-cols-gt-sm="6" md-cols-sm="4" md-cols-xs="2"
+      md-row-height="1:1"
+      md-gutter="1%">
+
+      <md-grid-tile
+        md-rowspan-gt-xs="2" md-colspan-gt-xs="4"
+        md-rowspan-xs="1" md-colspan-xs="2"
+        >
+        <img ng-src="{{ homectrl.top_games[0].home_banner }}" layout-fill/>
+      </md-grid-tile>
+
+      <md-grid-tile
+        md-rowspan="1" md-colspan="2"
+        >
+        <img ng-src="{{ homectrl.top_games[1].home_banner }}" layout-fill/>
+      </md-grid-tile>
+
+      <md-grid-tile
+        md-rowspan="1" md-colspan="2"
+        >
+        <img ng-src="{{ homectrl.top_games[2].home_banner }}" layout-fill/>
+      </md-grid-tile>
+    </md-grid-list>
+  </section>
 
   <!-- Stores -->
   <div layout="row" layout-align="center center">
