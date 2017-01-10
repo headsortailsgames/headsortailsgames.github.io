@@ -15,6 +15,7 @@
             gameList: gameList(),
             gameUrl: gameUrl,
             mainGame: getMainGame(),
+            topGames: getTopGames(),
         };
 
         return service;
@@ -51,6 +52,14 @@
 
         function getMainGame() {
             return findGameByNameSlug('crayonclick');
+        };
+
+        function getTopGames() {
+            return [
+                findGameByNameSlug('crayonclick'), // Main banner
+                findGameByNameSlug('superracing'), // Top minor banner
+                findGameByNameSlug('crayonclick'), // Bottom minor banner
+            ];
         };
 
         function gameList() {
