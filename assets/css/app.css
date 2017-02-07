@@ -22,3 +22,11 @@
 #header div.menu-item:hover {
   background-color: rgba(0, 0, 0, 0.12);
 }
+
+#main-banner {
+  padding: 1%;
+}
+
+.stores-section {
+  background-color: #d9d9d9;
+}

@@ -49,29 +49,20 @@
   </section>
 
   <!-- Stores -->
-  <div layout="row" layout-align="center center">
-    <div ng-repeat="store in homectrl.stores">
-      <img ng-src="{{ store.image }}" />
+  <section id="stores">
+    <div layout="row" class="stores-section" layout-align="center center">
+      <div ng-repeat="store in homectrl.stores">
+        <img ng-src="{{ store.image }}" />
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Game List -->
   <section id="game-list">
-  <div layout="row">
-    <md-card ng-repeat="game in homectrl.games">
-      <img ng-src="{{ game.icon }}" class="md-card-image" alt="{{ game.name }} icon">
-      <md-card-actions layout="row" layout-align="end center">
-        <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">{{ game.name }}</span>
-            </md-card-title-text>
-        </md-card-title>
-        <md-button class="md-icon-button" aria-label="Favorite">
-          <md-icon class="mdi mdi-google-play"></md-icon>
-        </md-button>
-      </md-card-actions>
-    </md-card>
-  </div>
+    <div layout="row">
+      <game-card ng-repeat="game in homectrl.games" game="game">
+      </game-card>
+    </div>
   </section>
 
   <!-- Footer -->
