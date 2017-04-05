@@ -1,51 +1,22 @@
-<div ng-controller="HomeController as homectrl" layout="column">
+<div ng-controller="HomeController as homectrl" layout="column"
+     class="home-body">
 
   <!-- Navigation bar -->
-  <header id="header" md-whiteframe="3" layout="row">
-    <div layout="row" layout-align-xs="center center" flex-xs>
-      <img src="assets/img/app/heads-or-tails-header-logo.svg"
-           class="logo-margin"/>
-    </div>
-
-    <div layout="row" layout-align="end" hide show-gt-xs flex>
-      <div class="menu-item" layout="row" layout-align="center center">
-        <a href="#game-list">Games</a>
-      </div>
-      <div class="menu-item" layout="row" layout-align="center center">
-        <a href="#contacts">Contact</a>
-      </div>
-      <div class="menu-item" layout="row" layout-align="center center">
-        <a ng-href="press">Press Kits</a>
-      </div>
-    </div>
+  <header id="header" layout="row" layout-align="center center">
+    <img src="assets/img/app/heads-or-tails-header-logo.svg"
+         class="logo-margin"/>
   </header>
 
   <!-- Main Banner -->
   <section id="main-banner">
-    <md-grid-list
-      md-cols-gt-sm="6" md-cols-sm="4" md-cols-xs="2"
-      md-row-height="1:1"
-      md-gutter="1%">
+    <div layout="row" layout-align="start start">
+      <img ng-src="{{ homectrl.top_games[0].home_banner }}" flex="70"/>
 
-      <md-grid-tile
-        md-rowspan-gt-xs="2" md-colspan-gt-xs="4"
-        md-rowspan-xs="1" md-colspan-xs="2"
-        >
-        <img ng-src="{{ homectrl.top_games[0].home_banner }}" layout-fill/>
-      </md-grid-tile>
-
-      <md-grid-tile
-        md-rowspan="1" md-colspan="2"
-        >
-        <img ng-src="{{ homectrl.top_games[1].home_banner }}" layout-fill/>
-      </md-grid-tile>
-
-      <md-grid-tile
-        md-rowspan="1" md-colspan="2"
-        >
-        <img ng-src="{{ homectrl.top_games[2].home_banner }}" layout-fill/>
-      </md-grid-tile>
-    </md-grid-list>
+      <div layout="column">
+        <img ng-src="{{ homectrl.top_games[1].home_banner }}" flex="50"/>
+        <img ng-src="{{ homectrl.top_games[2].home_banner }}" flex="50"/>
+      </div>
+    </div>
   </section>
 
   <!-- Stores -->
@@ -60,39 +31,26 @@
   <!-- Game List -->
   <section id="game-list">
     <div layout="row">
-      <game-card ng-repeat="game in homectrl.games" game="game">
-      </game-card>
+      <game-item ng-repeat="game in homectrl.games" game="game">
+      </game-item>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="contacts" layout="column">
-    <div layout="row"  layout-align="space-around center" flex>
-      <div layout="column">
-        <md-icon md-svg-icon="assets/img/app/heads-or-tails-games-logo-icon.svg"></md-icon>
-        <p>{{ homectrl.studio_info.name }}</p>
-      </div>
-      <div layout="column">
-        <md-icon class="mdi mdi-facebook-box"></md-icon>
-        <p>Facebook</p>
-      </div>
-      <div layout="column">
-        <md-icon class="mdi mdi-google-play"></md-icon>
-        <p>Google Play</p>
-      </div>
-      <div layout="column">
-        <md-icon class="mdi mdi-newspaper"></md-icon>
-        <p>Press Kit</p>
-      </div>
+  <footer id="footer" layout="column">
+    <div layout="row" layout-align="center center">
+      <p class="slogan">Play with the odds</p>
     </div>
 
-    <div layout="row" layout-align="center center">
-      <p>{{ homectrl.studio_info.email }}</p>
-    </div>
+    <hr>
 
-    <div layout="row" layout-align="center center">
-      {{ homectrl.studio_info.copyright }}
+    <div layout="row" class="icons">
+      <md-icon class="mdi mdi-facebook-box"></md-icon>
+      <md-icon class="mdi mdi-google-play"></md-icon>
+      <md-icon class="mdi mdi-newspaper"></md-icon>
+      <md-icon class="mdi mdi-newspaper" flex></md-icon>
+      <p class="press">Press?</p>
+      <md-icon class="mdi mdi-newspaper"></md-icon>
     </div>
   </footer>
-
 </div>
