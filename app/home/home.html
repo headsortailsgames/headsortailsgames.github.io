@@ -30,10 +30,22 @@
 
   <!-- Game List -->
   <section id="game-list">
+    <h2>Our Games</h2>
     <div layout="row">
-      <game-item ng-repeat="game in homectrl.games" game="game">
-      </game-item>
+      <game-card ng-repeat="game in homectrl.games" game="game" flex="30">
+      </game-card>
     </div>
+  </section>
+
+  <!-- Game Conferences, Game Jams -->
+  <section id="public-activity">
+    <h2>Where we've been...</h2>
+    <!-- Bring, Global Jam -->
+  </section>
+
+  <!-- Tutorials -->
+  <section id="tutorials">
+    <h2>Learn with us!</h2>
   </section>
 
   <!-- Footer -->
