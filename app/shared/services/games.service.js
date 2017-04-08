@@ -134,7 +134,7 @@
                     'trailer_video_url': '',
                     'game_description': '',
                     'game_short_description': '',
-                    'icon': '',
+                    'icon': 'assets/img/superracing/icon.png',
                     'small_icon': '',
                     'imgs': {
                      },

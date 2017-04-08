@@ -1,0 +1,18 @@
+game-card h3 {
+  white-space: nowrap;
+  margin: 0 !important;
+  padding: 0;
+  font-size: x-large;
+}
+
+game-card p {
+  margin: 0 !important;
+  padding: 0;
+  white-space: nowrap;
+}
+
+game-card p.genres {
+  font-size: small;
+  font-style: italic;
+  color: #c1b9b9;
+}
