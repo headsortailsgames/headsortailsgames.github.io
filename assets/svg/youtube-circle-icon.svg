@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="13.546789mm"
+   height="6.7733345mm"
+   viewBox="0 0 48.000433 24.000004"
+   id="svg9616"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="youtube-circle-icon.svg">
+  <defs
+     id="defs9618" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.167091"
+     inkscape:cx="17.954543"
+     inkscape:cy="7.8501012"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata9621">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(902.49499,-565.17398)">
+    <g
+       id="g9642"
+       transform="matrix(0.17508024,0,0,0.17508024,-744.93896,485.9688)"
+       inkscape:export-filename="/home/matheusfaria/Documents/headsortails/headsortailsgames.github.io/assets/img/icons/youtube-circle-standard.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         d="m -762.82634,520.93363 c 0,-37.85375 30.6875,-68.54 68.54125,-68.54 37.85375,0 68.54,30.68625 68.54,68.54 0,37.85375 -30.68625,68.54 -68.54,68.54 -37.85375,0 -68.54125,-30.68625 -68.54125,-68.54"
+         style="fill:#e52d27;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path3884-6"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m -702.47884,534.79363 0,-30.855 23.40125,15.425 -23.40125,15.43 z m 49.1625,-30.28625 c 0,-6.7675 -5.48,-12.25 -12.24625,-12.25 l -57.445,0 c -6.76625,0 -12.24625,5.4825 -12.24625,12.25 l 0,32.8525 c 0,6.765 5.48,12.25 12.24625,12.25 l 57.445,0 c 6.76625,0 12.24625,-5.485 12.24625,-12.25 l 0,-32.8525"
+         style="fill:#f1f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path3886-7"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g9654"
+       transform="matrix(0.17508024,0,0,0.17508024,-796.45178,484.46811)"
+       inkscape:export-filename="/home/matheusfaria/Documents/headsortails/headsortailsgames.github.io/assets/img/icons/youtube-circle-black.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         inkscape:connector-curvature="0"
+         id="path9648"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m -605.68348,529.50506 c 0,-37.85375 30.6875,-68.54 68.54125,-68.54 37.85375,0 68.54,30.68625 68.54,68.54 0,37.85375 -30.68625,68.54 -68.54,68.54 -37.85375,0 -68.54125,-30.68625 -68.54125,-68.54" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path9650"
+         style="fill:#f1f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m -545.33598,543.36506 0,-30.855 23.40125,15.425 -23.40125,15.43 z m 49.1625,-30.28625 c 0,-6.7675 -5.48,-12.25 -12.24625,-12.25 l -57.445,0 c -6.76625,0 -12.24625,5.4825 -12.24625,12.25 l 0,32.8525 c 0,6.765 5.48,12.25 12.24625,12.25 l 57.445,0 c 6.76625,0 12.24625,-5.485 12.24625,-12.25 l 0,-32.8525" />
+    </g>
+  </g>
+</svg>
