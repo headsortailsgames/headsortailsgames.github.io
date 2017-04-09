@@ -20,10 +20,12 @@
         return directive;
     }
 
-    gameCardController.$inject = [];
+    gameCardController.$inject = ['GamesService'];
 
      /* @ngInject */
-     function gameCardController() {
+     function gameCardController(GamesService) {
          var vm = this;
+
+         vm.gameUrl = GamesService.gameUrlSlug(vm.game);
      }
 })();
