@@ -3,16 +3,16 @@
 
     angular
         .module('app.home')
-        .directive('gameItem', gameItem);
+        .directive('gameCard', gameCard);
 
-    function gameItem() {
+    function gameCard() {
         var directive = {
-            templateUrl: '/app/home/directives/game-item.html',
+            templateUrl: '/app/home/directives/game-card.html',
             restrict: 'E',
             scope: {
                 game: '=',
             },
-            controller: gameItemController,
+            controller: gameCardController,
             controllerAs: 'vm',
             bindToController: true,
         };
@@ -20,10 +20,10 @@
         return directive;
     }
 
-    gameItemController.$inject = [];
+    gameCardController.$inject = [];
 
      /* @ngInject */
-     function gameItemController() {
+     function gameCardController() {
          var vm = this;
      }
 })();

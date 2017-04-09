@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="48"
+   height="24"
+   viewBox="0 0 48 24"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="newspaper-circle-icon.svg">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     id="namedview6"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="25.754012"
+     inkscape:cy="17.964238"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g3362"
+     transform="translate(-0.0719099,0)"
+     inkscape:export-filename="/home/matheusfaria/Documents/headsortails/headsortailsgames.github.io/assets/img/icons/newspaper-circle-black.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <circle
+       r="12"
+       cy="12"
+       cx="12.07191"
+       id="path3338"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0"
+       id="path4"
+       d="m 18.47191,11.2 -12.8000002,0 0,-2.3999998 12.8000002,0 m 0,5.5999998 -5.6,0 0,-1.6 5.6,0 m 0,4.8 -5.6,0 0,-1.6 5.6,0 m -7.2,1.6 -5.6000002,0 0,-4.8 5.6000002,0 m 7.464,-6.6639998 -1.328,-1.336 -1.336,1.336 -1.336,-1.336 -1.328,1.336 -1.336,-1.336 -1.336,1.336 -1.328,-1.336 -1.336,1.336 -1.336,-1.336 -1.3280002,1.336 -1.336,-1.336 0,12.7999998 a 1.6,1.6 0 0 0 1.6,1.6 l 12.8000002,0 a 1.6,1.6 0 0 0 1.6,-1.6 l 0,-12.7999998 -1.336,1.336 z" />
+  </g>
+  <g
+     id="g3358"
+     transform="translate(-0.81749343,0.08073997)"
+     inkscape:export-filename="/home/matheusfaria/Documents/headsortails/headsortailsgames.github.io/assets/img/icons/newspaper-circle-standard.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <circle
+       r="12"
+       cy="11.91926"
+       cx="36.817493"
+       id="path3338-3"
+       style="fill:#666666;fill-opacity:1;stroke:none" />
+    <path
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0"
+       id="path4-6"
+       d="m 43.217492,11.11926 -12.8,0 0,-2.3999989 12.8,0 m 0,5.5999989 -5.6,0 0,-1.6 5.6,0 m 0,4.8 -5.6,0 0,-1.6 5.6,0 m -7.2,1.6 -5.6,0 0,-4.8 5.6,0 m 7.464,-6.6639989 -1.328,-1.336 -1.336,1.336 -1.336,-1.336 -1.328,1.336 -1.336,-1.336 -1.336,1.336 -1.328,-1.336 -1.336,1.336 -1.336,-1.336 -1.328,1.336 -1.336,-1.336 0,12.7999989 a 1.6,1.6 0 0 0 1.6,1.6 l 12.8,0 a 1.6,1.6 0 0 0 1.6,-1.6 l 0,-12.7999989 -1.336,1.336 z" />
+  </g>
+</svg>

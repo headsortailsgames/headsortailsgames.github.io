@@ -9,13 +9,8 @@
 
   <!-- Main Banner -->
   <section id="main-banner">
-    <div layout="row" layout-align="start start">
-      <img ng-src="{{ homectrl.top_games[0].home_banner }}" flex="70"/>
-
-      <div layout="column">
-        <img ng-src="{{ homectrl.top_games[1].home_banner }}" flex="50"/>
-        <img ng-src="{{ homectrl.top_games[2].home_banner }}" flex="50"/>
-      </div>
+    <div layout="row" layout-align="center center">
+        <img ng-src="{{ homectrl.top_games[0].home_banner }}"/>
     </div>
   </section>
 
@@ -37,17 +32,6 @@
     </div>
   </section>
 
-  <!-- Game Conferences, Game Jams -->
-  <section id="public-activity">
-    <h2>Where we've been...</h2>
-    <!-- Bring, Global Jam -->
-  </section>
-
-  <!-- Tutorials -->
-  <section id="tutorials">
-    <h2>Learn with us!</h2>
-  </section>
-
   <!-- Footer -->
   <footer id="footer" layout="column">
     <div layout="row" layout-align="center center">
@@ -56,13 +40,14 @@
 
     <hr>
 
-    <div layout="row" class="icons">
-      <md-icon class="mdi mdi-facebook-box"></md-icon>
-      <md-icon class="mdi mdi-google-play"></md-icon>
-      <md-icon class="mdi mdi-newspaper"></md-icon>
-      <md-icon class="mdi mdi-newspaper" flex></md-icon>
-      <p class="press">Press?</p>
-      <md-icon class="mdi mdi-newspaper"></md-icon>
+    <div layout="row" class="icons" layout-align="start center">
+      <a href="#" class="icon facebook-icon">Facebook</a>
+      <a href="#" class="icon youtube-icon">Youtube</a>
+      <a href="#" class="icon android-icon">Google Play Store</a>
+      <a href="#" class="icon email-icon">Email</a>
+      <span flex></span>
+      <p layout-margin="0">Press?</p>
+      <a href="#" class="icon press-icon">Press Kits</a>
     </div>
   </footer>
 </div>
