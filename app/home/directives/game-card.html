@@ -1,9 +1,12 @@
-<div layout="row">
-  <img ng-src="{{ vm.game.icon }}" alt="{{ vm.game.name }} icon"
-       layout-margin="2%">
-  <div layout="column" layout-margin="2%">
-    <h3>{{ vm.game.name }}</h3>
-    <p class="genres" flex>Puzzle</p>
-    <p>PC, Mac OS, Linux</p>
-  </div>
+<div>
+  <a href="{{ vm.gameUrl }}" layout="row">
+    <img ng-src="{{ vm.game.icon }}" layout-margin="2%" >
+
+    <div layout="column" layout-margin="2%">
+      <h3>{{ vm.game.name }}</h3>
+      <p class="genres" flex>{{ vm.game.genre }}</p>
+      <p ng-if="vm.game.released"> {{ vm.game.platforms}} </p>
+      <p class="comming-soon" ng-if="!vm.game.released"> Comming Soon </p>
+    </div>
+  </a>
 </div>

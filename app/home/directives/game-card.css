@@ -1,3 +1,14 @@
+game-card {
+  border-style: solid;
+  border-color: transparent;
+  border-width: 2px;
+  border-radius: 8px;
+}
+
+game-card:hover {
+  border-color: black;
+}
+
 game-card h3 {
   white-space: nowrap;
   margin: 0 !important;
@@ -15,4 +26,18 @@ game-card p.genres {
   font-size: small;
   font-style: italic;
   color: #c1b9b9;
+}
+
+game-card a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+game-card .comming-soon {
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 7px;
 }

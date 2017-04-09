@@ -14,6 +14,7 @@
             findGameByNameSlug: findGameByNameSlug,
             gameList: gameList(),
             gameUrl: gameUrl,
+            gameUrlSlug: gameUrlSlug,
             mainGame: getMainGame(),
             topGames: getTopGames(),
         };
@@ -50,6 +51,10 @@
             return 'game/' + game.id;
         };
 
+        function gameUrlSlug(game) {
+            return 'game/' + game.name_slug;
+        };
+
         function getMainGame() {
             return findGameByNameSlug('crayonclick');
         };
@@ -74,6 +79,10 @@
                 //     'google_play_url': '',
                 //     // Banner displayed on home page
                 //     'home_banner': '',
+                //     // Genre
+                //     'genre': '',
+                //     // Platforms
+                //     'platforms': '',
                 //     // All banners used on promos, facebook, etc...
                 //     'banners': [],
                 //     // Game screenshots
@@ -107,6 +116,8 @@
                     'name_slug': 'crayonclick',
                     'google_play_url': 'https://play.google.com/store/apps/details?id=headsortails.crayonclick.game.android',
                     'home_banner': 'assets/img/crayonclick/home-banner.png',
+                    'genre': 'Puzzle',
+                    'platforms': 'Android',
                     'banners': [],
                     'screenshots': [],
                     'promo_video_url': '',
@@ -117,7 +128,7 @@
                     'small_icon': 'assets/img/crayonclick/icon.png',
                     'imgs': {
                      },
-                    'released': false,
+                    'released': true,
                     'template_url': '',
                 },
 
@@ -128,6 +139,8 @@
                     'name_slug': 'superracing',
                     'google_play_url': 'https://play.google.com/store/apps/details?id=project.superracing',
                     'home_banner': 'assets/img/superracing/home-banner.png',
+                    'genre': 'Arcade Retro',
+                    'platforms': 'Android',
                     'banners': [],
                     'screenshots': [],
                     'promo_video_url': '',

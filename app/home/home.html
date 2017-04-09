@@ -26,8 +26,9 @@
   <!-- Game List -->
   <section id="game-list">
     <h2>Our Games</h2>
-    <div layout="row">
-      <game-card ng-repeat="game in homectrl.games" game="game" flex="30">
+    <div layout="row" layout-wrap>
+      <game-card ng-repeat="game in homectrl.games" game="game"
+                 flex-gt-sm="30" flex-xs="100" flex="50">
       </game-card>
     </div>
   </section>
