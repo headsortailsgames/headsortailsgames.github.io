@@ -1,16 +1,14 @@
-<div ng-controller="HomeController as homectrl" layout="column"
-     class="home-body">
-
-  <!-- Navigation bar -->
-  <header id="header" layout="row" layout-align="center center">
-    <img src="assets/img/app/heads-or-tails-header-logo.svg"
-         class="logo-margin"/>
-  </header>
+<div ng-controller="HomeController as homectrl" layout="column">
 
   <!-- Main Banner -->
   <section id="main-banner">
-    <div layout="row" layout-align="center center">
-        <img ng-src="{{ homectrl.top_games[0].home_banner }}"/>
+    <div layout="row">
+      <img src="assets/img/app/heads-or-tails-header-logo.svg"/>
+
+      <div layout="column">
+        <p>Punch line related to luck!</p>
+        <a href="#game-list" class="call-for-action">Have fun now!</a>
+      </div>
     </div>
   </section>
 
