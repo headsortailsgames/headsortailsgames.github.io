@@ -2,11 +2,24 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .home-header {
   margin-left: 10%;
   margin-right: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  #left-pane {
+    visibility: hidden;
+    clear: both;
+    display: none;
+  }
 }
 
 .home-header-punch-line {
