@@ -93,62 +93,47 @@ section#stores {
 
 footer {
   background-color: #18918a;
+  color: white;
 }
 
 .slogan {
-  font-size: 2.0em;
+  font-size: 4.0em;
+  margin: 4%;
+  padding: 0;
+}
+
+.footer-p {
+  margin: 0;
+  padding: 0;
 }
 
 footer > hr {
-  border-color: black;
+  border-color: white;
   border-style: solid;
+  border-width: 1px;
   width: 95%;
+}
+
+.footer-icon {
+  text-decoration: none;
+  text-align: center;
+  color: #18918a;
+  background-color: white;
+  border-radius: 30px;
+  width: 24px;
+  height: 24px;
+  font-size: 1.3em;
+  margin: 0.5%;
+}
+
+.footer-icon:hover {
+  background-color:  rgb(145, 219, 228);
 }
 
 .icons {
  padding-left: 2.5%;
  padding-right: 2.5%;
 }
-
-.icon {
-  background-repeat: no-repeat;
-  font-size: 0;
-  width: 24px;
-  height: 24px;
-  margin: 0.5%;
-}
-
-.facebook-icon {
-  background-image: url(/assets/img/icons/facebook-circle-black.png);
-}
-.facebook-icon:hover {
-  background-image: url(/assets/img/icons/facebook-circle-standard.png);
-}
-.youtube-icon {
-  background-image: url(/assets/img/icons/youtube-circle-black.png);
-}
-.youtube-icon:hover {
-  background-image: url(/assets/img/icons/youtube-circle-standard.png);
-}
-.android-icon {
-  background-image: url(/assets/img/icons/android-circle-black.png);
-}
-.android-icon:hover {
-  background-image: url(/assets/img/icons/android-circle-standard.png);
-}
-.email-icon {
-  background-image: url(/assets/img/icons/email-circle-black.png);
-}
-.email-icon:hover {
-  background-image: url(/assets/img/icons/email-circle-standard.png);
-}
-.press-icon {
-  background-image: url(/assets/img/icons/newspaper-circle-black.png);
-}
-.press-icon:hover {
-  background-image: url(/assets/img/icons/newspaper-circle-standard.png);
-}
-
 
 
 .game-card {
