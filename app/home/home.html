@@ -15,20 +15,62 @@
 
   <!-- Stores -->
   <section id="stores">
-    <div layout="row" class="stores-section" layout-align="center center">
-      <div ng-repeat="store in homectrl.stores">
-        <img ng-src="{{ store.image }}" />
+    <div layout="row" class="stores" layout-align="space-around center"
+      flex>
+      <div layout="column" layout-align="center center">
+        <a href="#" class="stores-store-link">
+          <i class="stores-store-icon mdi mdi-android"></i>
+          <p class="stores-store-name">Android</p>
+        </a>
+      </div>
+      <div layout="column" layout-align="center center">
+        <a href="#" class="stores-store-link">
+          <i class="stores-store-icon mdi mdi-apple"></i>
+          <p class="stores-store-name">iOS</p>
+        </a>
+      </div>
+      <div layout="column" layout-align="center center">
+        <a href="#" class="stores-store-link">
+          <i class="stores-store-icon mdi mdi-steam"></i>
+          <p class="stores-store-name">Steam</p>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Game List -->
   <section id="game-list">
-    <h2>Our Games</h2>
-    <div layout="row" layout-wrap>
-      <game-card ng-repeat="game in homectrl.games" game="game"
-                 flex-gt-sm="30" flex-xs="100" flex="50">
-      </game-card>
+    <div class="games">
+      <h2 class="games-section-title">Our Games</h2>
+      <div layout="row" layout-align="space-around center" layout-wrap>
+
+
+        <div class="game-card" flex-gt-sm="30" flex-xs="100" flex="50">
+          <a href="#" layout="row">
+            <img ng-src="assets/img/crayonclick/icon.png" layout-margin="2%">
+
+            <div layout="column" layout-margin="2%">
+              <h3>Crayon Click</h3>
+              <p class="genres" flex>Puzzle</p>
+              <p>Android</p>
+              <!-- <p class="comming-soon" ng-if="!vm.game.released"> Comming Soon </p> -->
+            </div>
+          </a>
+        </div>
+
+        <div class="game-card" flex-gt-sm="30" flex-xs="100" flex="50">
+          <a href="#" layout="row">
+            <img ng-src="assets/img/superracing/icon.png" layout-margin="2%">
+
+            <div layout="column" layout-margin="2%">
+              <h3>Super Racing</h3>
+              <p class="genres" flex>Arcade Retro</p>
+              <div class="coming-soon"> Coming Soon </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
     </div>
   </section>
 
