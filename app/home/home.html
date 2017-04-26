@@ -2,12 +2,13 @@
 
   <!-- Main Banner -->
   <header id="header">
-    <div layout="row" class="home-header">
-      <img src="assets/img/app/heads-or-tails-header-logo.svg"/>
+    <div layout="row" layout-align-xs="center center" class="home-header">
+      <div flex="60" flex-xs="100">
+        <img src="assets/img/app/heads-or-tails-header-logo.svg"/>
+      </div>
 
-      <div id="left-pane" layout="column" layout-align="center end" flex>
-        <p class="home-header-punch-line">We build games</p>
-        <p class="home-header-punch-line">for you!</p>
+      <div layout="column" layout-align="center end" class="header-left" hide-xs flex>
+        <p class="home-header-punch-line">We build games for you!</p>
         <a href="#stores" class="call-for-action">Enjoy now!</a>
       </div>
     </div>
@@ -63,7 +64,7 @@
             <img ng-src="assets/img/superracing/icon.png" layout-margin="2%">
 
             <div layout="column" layout-margin="2%">
-              <h3>Super Racing</h3>
+              <h3>Super Racing 3000</h3>
               <p class="genres" flex>Arcade Retro</p>
               <div class="coming-soon"> Coming Soon </div>
             </div>
@@ -86,7 +87,7 @@
       <a href="#" class="footer-icon"><i class="mdi mdi-facebook"></i></a>
       <a href="#" class="footer-icon"><i class="mdi mdi-youtube-play"></i></a>
       <a href="#" class="footer-icon"><i class="mdi mdi-email"></i></a>
-      <p class="footer-p">headsortails.games@gmail.com</p>
+      <p class="footer-p" hide-xs>headsortails.games@gmail.com</p>
       <span flex></span>
       <p class="footer-p">Press?</p>
       <a href="#" class="footer-icon"><i class="mdi mdi-newspaper"></i></a>
